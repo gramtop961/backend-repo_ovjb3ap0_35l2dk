@@ -8,14 +8,32 @@ Model name is converted to lowercase for the collection name.
 This project targets Dutch bookkeeping use cases (facturen, uitgaven, btw).
 """
 from typing import Optional, List, Literal
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 from datetime import date
 
-# Gebruikers kunnen later worden uitgebreid
+# Gebruikers
 class User(BaseModel):
     name: str = Field(..., description="Volledige naam")
-    email: str = Field(..., description="E-mailadres")
+    email: EmailStr = Field(..., description="E-mailadres")
     is_active: bool = Field(True, description="Actief")
+    # Voor opslag: hashed_password wordt alleen in DB gebruikt; niet in API responses
+
+class UserCreate(BaseModel):
+    name: str
+    email: EmailStr
+    password: str = Field(..., min_length=6)
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+class UserOut(BaseModel):
+    name: str
+    email: EmailStr
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
 
 class InvoiceItem(BaseModel):
     description: str = Field(..., description="Omschrijving")
@@ -25,7 +43,7 @@ class InvoiceItem(BaseModel):
 
 class Invoice(BaseModel):
     customer_name: str = Field(..., description="Klantnaam")
-    customer_email: Optional[str] = Field(None, description="E-mail klant")
+    customer_email: Optional[EmailStr] = Field(None, description="E-mail klant")
     issue_date: date = Field(..., description="Factuurdatum")
     due_date: Optional[date] = Field(None, description="Vervaldatum")
     status: Literal["concept", "verzonden", "betaald", "verlopen"] = Field("concept")
