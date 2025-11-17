@@ -1,13 +1,31 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [427] using StatReload
-INFO:     Started server process [429]
+INFO:     Started reloader process [515] using StatReload
+INFO:     Started server process [517]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:45424 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:45428 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45444 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45428 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45444 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
-INFO:     172.20.0.1:34650 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
-INFO:     172.20.0.1:34650 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58412 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:58420 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58422 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58458 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58466 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58452 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58420 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58448 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58458 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58436 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58444 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58422 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58448 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58436 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58444 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58452 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58466 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58472 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46550 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46564 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46580 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:58472 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46550 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46564 - "GET /api/expenses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46580 - "GET /api/reports/monthly?year=2025 HTTP/1.1" 200 OK
